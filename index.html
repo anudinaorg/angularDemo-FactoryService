@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="angular.min.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body ng-app="loginApp">
+<div ng-controller="loginController">
+<b>Welcome user {{message.loginUser}}</b>
+</div>
+<script>
+angular.module("loginApp",[]).controller("loginController",function($scope){
+	$scope.message={};
+	$scope.message.loginUser="sbothamarc";
+});
+</script>
+</body>
+</html>
