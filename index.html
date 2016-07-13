@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="carrierApp">
 <head>
 <script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<script>
+
+</script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body ng-app="loginApp">
-<div ng-controller="loginController">
-<b>Welcome user {{message.loginUser}}</b>
+<body>
+<div ng-controller="validCarrierController">
+<b>List of valid carrier controllers are:::</b>
+<ul ng-repeat="carrierType in carriers |filter:'validCCCarrier'">
+<li>{{carrierType.id}}--{{carrierType.carriercode}}--{{carrierType.type}}
+</ul>
 </div>
-<script>
-angular.module("loginApp",[]).controller("loginController",function($scope){
-	$scope.message={};
-	$scope.message.loginUser="sbothamarc";
-});
-</script>
 </body>
 </html>
